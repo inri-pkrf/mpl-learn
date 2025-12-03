@@ -1,0 +1,78 @@
+/* Reset בסיסי */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* הרקע */
+.cloud-page {
+  width: 100%;
+  min-height: 100vh; /* מכסה את כל המסך */
+  background-color: #FFE4E9;
+}
+
+
+
+.cloud-page-item {
+  position: relative;
+  text-align: center;
+  min-height: 100vh; /* פריט לפחות גובה מסך */
+  margin-bottom: 0;  /* או מרווח קטן יותר אם רוצים */
+}
+
+
+/* קונטיינר שמחזיק את התמונה + טקסט */
+.cloud-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* התמונה עצמה */
+.cloud-page-img {
+  width: 100%;
+  display: block;
+}
+
+/* קונטיינר לטקסט שיושב על התמונה */
+.cloud-text {
+  position: absolute;
+  top: 50%;               
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  width: 80%;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Subtitle */
+h3 {
+  font-size: 3vmin;
+  color: #555;
+  margin-bottom: 2vh;
+  color: #55C6FF;
+}
+
+/* Text */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* הכותרת הראשית מעל התמונה */
+h1 {
+  color: #800F2F;
+  font-size: 5vmin;
+  margin-bottom: 2vh;
+  position: relative;
+  left: 32vw;
+  font-family: 'Rubik Spray Paint';
+  font-weight: 500;
+}

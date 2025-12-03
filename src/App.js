@@ -1,18 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+import CloudButtonsPage from './Components.jsx/CloudButtonsPage';
+import CloudPage from './Components.jsx/CloudPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-        לומדת חפיפה
-        </p>
-<p>עמוד עם 8 כפתורים לכל כותרת ענן, ועמוד נוסף עם הטקסט של כל ענן. שניהם מקבלים מידע מדאטה.</p>
-        
-      </header>
+      <Routes>
+        <Route path="/" element={<CloudButtonsPage />} />
+        <Route path="/page/:id" element={<CloudPage />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+function AppWrapper() {
+    return (
+        <Router>
+            <App />
+        </Router>
+    );
+}
+
+export default AppWrapper;
