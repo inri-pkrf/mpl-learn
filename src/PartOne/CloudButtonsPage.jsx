@@ -1,6 +1,6 @@
 import React from 'react';
 import buttonsData from '../Data/CloudButtonsData';
-import '../Components.css/CloudButtonsPage.css';
+import './Styles/CloudButtonsPage.css';
 import { useNavigate } from 'react-router-dom';
 
 const CloudButtonsPage = () => {
@@ -17,7 +17,7 @@ const CloudButtonsPage = () => {
           >
             <div className="cloud-image-wrapper">
               <img
-                src={`${process.env.PUBLIC_URL}/${btn.image}`}
+                src={`${process.env.PUBLIC_URL}/PartOne/${btn.image}`}
                 alt={btn.title}
                 className="cloud-image"
               />

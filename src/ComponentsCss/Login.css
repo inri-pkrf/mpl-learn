@@ -1,0 +1,64 @@
+
+.login-container {
+ position: absolute;
+  top:0vh;
+  right:0vh;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px; /* רוחב הטופס */
+  padding: 40px;
+  background: #ffffff; /* רקע לבן לטופס בלבד */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 0 auto; /* מרכז אופקית את הטופס */
+}
+
+.Avital{
+position: absolute;
+    width: 42vw;
+    height: auto;
+    left: -6vw;
+    top: 23vh;
+
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #1c538a;
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 15px;
+background-color: #800f2f;;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #1c86ee;
+  transform: translateY(-3px);
+}
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import clodeData from '../Data/CloudData';
-import '../Components.css/CloudPage.css';
+import './Styles/CloudPage.css';
 
 const CloudPage = () => {
   const { id } = useParams();
@@ -14,10 +14,9 @@ const CloudPage = () => {
       {pageData.pages.map((page, index) => (
         <div key={index} className="cloud-page-item">
             <h1>{page.title}</h1>
-          {/* קונטיינר יחסי שמחזיק תמונה + טקסט */}
           <div className="cloud-img-wrapper">
             <img
-              src={`${process.env.PUBLIC_URL}/Assets/${page.image}`}
+              src={`${process.env.PUBLIC_URL}/Assets/PartOne/${page.image}`}
               alt={page.title}
               className="cloud-page-img"
             />
@@ -27,8 +26,6 @@ const CloudPage = () => {
               <p>{page.text}</p>
             </div>
           </div>
-
-          {/* הכותרת הראשית מחוץ לתמונה */}
         </div>
       ))}
     </div>
