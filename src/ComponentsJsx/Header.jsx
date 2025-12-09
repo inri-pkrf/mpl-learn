@@ -6,30 +6,33 @@ import '../ComponentsCss/Header.css';
 
 function Header() {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  
 
   return (
-    <header className="header">
-      {/* <Hamburger className="hamburger"/> */}
-      
+    <div className="header">
+    
       <img
-        src={`${process.env.PUBLIC_URL}/assets/imgs/whiteLogo.svg`}
-        className="App-logo"
+        src={`${process.env.PUBLIC_URL}/Assets/i-icon.png`}
+        className="i-logo"
         alt="logo"
       />
      
 
       
-      <button
+      <div
         className="back-homeNav"
-        onClick={() => navigate('/menu')} // ניווט לעמוד הבית
+        onClick={() => navigate('/menu')} 
       >
-      </button>
+              <img
+        src={`${process.env.PUBLIC_URL}/Assets/pinkCloud.png`}
+        className="menu-logo"
+        alt="logo"
+      />
+      <p className='menu-back'>חזרה למפה</p>
+      </div>
 
     
-    </header>
+    </div>
   );
 }
 

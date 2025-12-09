@@ -9,14 +9,17 @@
 }
 
 .login-form {
-  display: flex;
-  flex-direction: column;
-  width: 400px; /* רוחב הטופס */
-  padding: 40px;
-  background: #ffffff; /* רקע לבן לטופס בלבד */
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin: 0 auto; /* מרכז אופקית את הטופס */
+position: relative;
+    display: flex;
+    margin-top: 22vh;
+    flex-direction: column;
+    width: 35vw;
+    right: 32vw;
+    height: 29vh;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .Avital{
@@ -62,3 +65,13 @@ background-color: #800f2f;;
 }
 
 
+.login-title {
+color: #800F2F;
+    font-size: 5vmin;
+    margin-top: 10vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}

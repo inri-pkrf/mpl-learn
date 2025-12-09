@@ -8,9 +8,12 @@ import FirstPage from './ComponentsJsx/FirstPage.jsx';
 import Enternce from './ComponentsJsx/Enternce';
 import Login from './ComponentsJsx/Login.jsx';
 import Register from './ComponentsJsx/Register.jsx';
+import Header from './ComponentsJsx/Header.jsx';
 function App() {
   return (
     <div className="App">
+      <Header></Header>
+
       <Routes>
         <Route path="/" element={<Enternce />} />
         <Route path="/firstPage" element={<FirstPage />} />

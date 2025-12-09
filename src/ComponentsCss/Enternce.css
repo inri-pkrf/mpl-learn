@@ -1,4 +1,4 @@
-.Enternce-container {
+.FirstPage{
   position: absolute;
   top:0vh;
   right:0vh;
@@ -8,13 +8,14 @@
 }
 
 .Enternce-title {
- color: #800F2F;
-  font-size: 5vmin;
-  margin-bottom: 2vh;
-  position: relative;
-  left: 32vw;
-  font-family: 'Rubik Spray Paint';
-  font-weight: 500;
+color: #800F2F;
+    font-size: 5vmin;
+    margin-top: -16vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
 }
 .Avital{
 position: absolute;
@@ -25,11 +26,12 @@ position: absolute;
 
 }
 .buttons-answer {
-display: flex;
+    position: relative;
+    display: flex;
     justify-content: center;
     gap: 10vw;
-    margin-top: 27vh;
-    /* right: -45vw; */
+    margin-top: 25vh;
+    right: 29vw;
     width: 40vw;
 }
 
@@ -69,12 +71,13 @@ color: #FFFFFF;
 }
 .greetings{
 font-family: "Rubik";
-position: absolute;
-margin-top:25vh;
-font-weight: 1000;
-font-size: 4vmin;
-right: 10vw;
-text-align: right;
-color: #000000;
-z-index: 1000;
+    position: absolute;
+    margin-top: -2vh;
+    font-weight: 1000;
+    font-size: 4vmin;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: right;
+    color: #000000;
+    z-index: 1000;
 }

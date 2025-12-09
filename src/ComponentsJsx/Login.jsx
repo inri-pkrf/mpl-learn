@@ -43,7 +43,7 @@ alert(`ברוכה הבאה, ${userData.name}!`);
 
   return (
     <div className="login-container">
-      <h1 className="Enternce-title">כניסה</h1>
+      <h1 className="login-title">עמוד התחברות</h1>
       <img
         src={`${process.env.PUBLIC_URL}/Assets/People/Avital.png`}
         className="Avital"
