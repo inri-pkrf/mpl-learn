@@ -15,7 +15,7 @@ export default function Map({ user: propUser }) {
     { id: 1, label: "היום יום", right: 350, top: 600, path: "/cloudsPage" },
     { id: 2, label: "השפה של המכללה", right: 600, top: 500, path: "/collageLanguge" },
     { id: 3, label: "ללמוד REACT", right: 800, top: 400, path: "/LearnReact" },
-    { id: 4, label: "עיצובים וכלי עבודה", right: 1000, top: 300, path: "/cloudsPage4" },
+    { id: 4, label: "עיצובים וכלי עבודה", right: 1000, top: 300, path: "/FlipPage" },
     { id: 5, label: "התקנות", right: 1200, top: 200, path: "/cloudsPage5" },
     { id: 6, label: "פרויקט חפיפה", right: 1400, top: 20, path: "/cloudsPage6" },
   ];

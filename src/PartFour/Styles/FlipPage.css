@@ -1,0 +1,9 @@
+.flip-page {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 0;
+  flex-wrap: wrap;
+  background: #fafafa;
+  min-height: 100vh;
+}
