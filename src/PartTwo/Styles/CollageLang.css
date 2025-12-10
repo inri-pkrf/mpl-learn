@@ -1,0 +1,112 @@
+.CollageLang {
+position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    padding-top: 15vh;
+    background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+    overflow: hidden;
+}
+.card {
+  position: relative;
+  width: 25vw;
+  height: 65vh;
+  background: linear-gradient(143.04deg, #F9ECFB 8.86%, #FF9CAF 84.12%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 1;
+  /* ספר מותג המכללה */
+
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 700;
+font-size: 3vmin;
+line-height: 47px;
+text-align: center;
+
+color: #800F2F;
+
+
+}
+
+.card.open {
+  transform: scale(1.05);
+  z-index: 100;
+}
+
+/* Overlay שחור על כל העמוד */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+/* הכרטיס הפתוח במרכז ה-overlay */
+.card-overlay {
+width: 80vw;
+    /* max-width: 600px; */
+    height: 70vh;
+    background: linear-gradient(143.04deg, #F9ECFB 8.86%, #FF9CAF 84.12%);
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: all 0.5s 
+ease;
+}
+
+.img-overlay{
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.closeCard{
+    position: relative;
+    width: 5vw;
+    height: auto;
+    left: -65vw;
+    margin-top: -65vh;
+    cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 7vmin;
+color: #800F2F;}
+.next-button-col{
+
+}
+
+.next-button-col{
+  position: absolute;
+  top:80vh;
+  left:10vw;
+  border: none;
+  background-color: transparent;
+cursor: pointer;
+}
+.next-button-col:hover{
+ transform: scale(1.1);
+}

@@ -1,0 +1,106 @@
+.Map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+  overflow: hidden;
+}
+
+/* ענן */
+.Map .cloud-step {
+  position: absolute;
+  width: 10VW;
+  height: 10VW;
+  text-align: center;
+  cursor: pointer;
+}
+.Map .cloud-img{
+    position: relative;
+    width: 15vw;
+    height: auto;
+    right: 50%;
+    transform: translateX(50%);
+}
+.Map .pink-cloud{
+     position: relative;
+    width: 14vw;
+    height: auto;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 5VH;
+}
+
+.cloud-step.locked {
+  opacity: 0.55;
+  filter: grayscale(80%);
+}
+
+/* טקסט על הענן */
+.cloud-label {
+  position: absolute;
+  bottom: 15%; /* מעט מעל הקצה התחתון */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #474747;
+  width: 90%;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* טקסט שלב פתוח (next step) */
+.cloud-label.unlocked {
+  color: #801b3e;
+}
+
+/* טקסט שלב אחרון */
+.cloud-label.last {
+  font-size: 28px;
+  color: #800F2F;
+}
+
+/* דמות מעל הענן */
+.alma {
+position: absolute;
+   width: 15vw;
+    height: auto;
+    left: 50%;
+    top: -212px;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* "אני כאן" */
+.here {
+  position: absolute;
+    top: -253px;  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #800F2F;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* אפקט חמוד כשמרחפים מעל הענן */
+.cloud-step:hover:not(.locked) {
+  transform: scale(1.1);
+}
+.avitalCLOUD{
+WIDTH: 16VW;
+    height: auto;
+
+}
+.map-title{
+    color: #800F2F;
+    font-size: 7vmin;
+    margin-top: 5vh;
+    position: absolute;
+    right: 5%;
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}

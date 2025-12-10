@@ -3,7 +3,7 @@
     top: 0;
     width: 100vw;
     height: 11vh;
-    z-index: 10000;
+    z-index: 1000;
     background-size: cover;
     background-repeat: no-repeat;
  }
@@ -27,9 +27,9 @@
 
 
 .menu-back{
-position: absolute;
+    position: absolute;
     right: 7vw;
-    top: 5vh;
+    top: 3vh;
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 700;

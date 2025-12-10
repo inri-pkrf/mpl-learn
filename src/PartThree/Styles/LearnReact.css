@@ -1,0 +1,167 @@
+.LearnReact {
+position: relative;
+ position: absolute;
+  top:0vh;
+  right:0vh;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+}
+.react-title {
+color: #800F2F;
+    font-size: 5vmin;
+    margin-top: 10vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}
+.react-txt{
+position: absolute;
+top: 15vh;
+right: 50%;
+transform: translateX(50%);
+width: 70vw;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 3vmin;
+line-height: 39px;
+text-align: center;
+color: #000000;
+}
+.react-txt a{
+color: #800F2F;
+}
+.react-txt-2{
+position: absolute;
+top: 25vh;
+right: 50%;
+transform: translateX(50%);
+width: 70vw;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 800;
+font-size: 3vmin;
+line-height: 39px;
+text-align: center;
+color: #800F2F;
+}
+.react1-img{
+  position: absolute;
+  width: 35vw;
+  top:40vh
+}
+.react2-img{
+  position: absolute;
+  width: 35vw;
+  top:25vh
+}
+.order{
+  position: absolute;
+top: 45vh;
+right: 15%;
+width: 30vw;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 3vmin;
+line-height: 39px;
+text-align: center;
+color: #000000;
+direction: rtl;
+}
+.order-2{
+  position: absolute;
+top: 25vh;
+right: 15%;
+width: 30vw;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 3vmin;
+line-height: 39px;
+text-align: center;
+color: #000000;
+direction: rtl;
+}
+.navigation-btn {
+    position: fixed; /* במקום relative */
+    bottom: 20px; /* תמיד 20px מהתחתית */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* החצים קבועים בקצוות */
+    align-items: center;
+    font-family: 'Assistant', sans-serif;
+    gap: 0;
+}
+
+.navigation-btn .prev,
+.navigation-btn .next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(89, 89, 89);
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* החץ למראה */
+.right {
+    transform: rotateY(180deg);
+}
+
+.quiz-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 32vh;
+  right: 15vw;
+  cursor: pointer;
+}
+
+.quiz-btn {
+box-sizing: border-box;
+width: 418px;
+height: 122px;
+background: #FFFFFF;
+border: 4px dashed #800F2F;
+border-radius: 22px;
+font-size: 2vmin;
+
+}
+
+.quiz-btn:hover {
+  background: #ff9caf;
+  color: white;
+}
+
+.answer-feedback {
+  position: absolute;
+  margin-top: 80vh;
+  right: 30vw;
+  font-size: 2vmin;
+  width: 40vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answer-feedback.correct {
+  color: green;
+}
+
+.answer-feedback.wrong {
+  color: red;
+}
+.exp{
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+}

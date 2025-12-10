@@ -12,9 +12,14 @@ html, body {
 
 /* הרקע */
 .cloud-page {
-  width: 100%;
-  min-height: 100vh; /* מכסה את כל המסך */
-  background-color: #FFE4E9;
+ position: absolute;
+  top:0vh;
+  right:0vh;
+  width: 100vw;
+  height: 100vh;
+  direction: rtl;
+  background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+  overflow: hidden;
 }
 
 
@@ -22,6 +27,8 @@ html, body {
 .cloud-page-item {
   position: relative;
   text-align: center;
+    direction: rtl;
+
   min-height: 100vh; /* פריט לפחות גובה מסך */
   margin-bottom: 0;  /* או מרווח קטן יותר אם רוצים */
 }
@@ -30,39 +37,56 @@ html, body {
 /* קונטיינר שמחזיק את התמונה + טקסט */
 .cloud-img-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
+  width: 80vw;
+  max-width: 70vw;
   margin: 0 auto;
+  display: flex;           /* סדרה של תמונה + imageInfo */
+  align-items: center;     /* יישור אנכי */
+  justify-content: center; /* מרכז אופקי */
+  gap: 20px;               /* רווח בין התמונות */
 }
 
-/* התמונה עצמה */
-.cloud-page-img {
-  width: 100%;
-  display: block;
+.cloud-page-img-info {
+width: 10vw;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    position: relative;
+    left: 67vw;
+    top: 5vh;
 }
+
+
+
 
 /* קונטיינר לטקסט שיושב על התמונה */
-.cloud-text {
+.cloud-page .cloud-text {
   position: absolute;
   top: 50%;               
   left: 50%;
   transform: translate(-50%, -50%);  
-  width: 80%;
+  width: 60%;
   z-index: 10;
   text-align: center;
+  direction: rtl;
 }
 
 /* Subtitle */
 .cloud-page h3 {
-  font-size: 3vmin;
+  font-size: 5vmin;
   color: #555;
   margin-bottom: 2vh;
   color: #55C6FF;
+    direction: rtl;
+
 }
 
 /* Text */
 .cloud-page p {
-  font-size: 16px;
+  font-size: 2.5vmin;
+    direction: rtl;
+
   line-height: 1.5;
 }
 
@@ -70,9 +94,24 @@ html, body {
 .cloud-page h1 {
   color: #800F2F;
   font-size: 5vmin;
-  margin-bottom: 2vh;
+  margin-top: 5vh;
   position: relative;
-  left: 32vw;
+  left: 3vw;
   font-family: 'Rubik Spray Paint';
   font-weight: 500;
+}
+.next-button-cloud{
+  position: absolute;
+  top:80vh;
+  left:10vw;
+  border: none;
+  background-color: transparent;
+cursor: pointer;
+}
+.next-button-cloud:hover{
+ transform: scale(1.1);
+}
+.cloud-page-img{
+  width: 100%; display: block;
+
 }

@@ -19,7 +19,7 @@ function FirstPage() {
 
   const handleNavigate = () => {
     if (Number(score) >= 70) {
-      navigate("/map", { state: { user, score } });
+      navigate("/map", { state: { user} });
     }
   };
 
