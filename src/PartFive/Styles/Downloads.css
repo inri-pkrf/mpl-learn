@@ -1,0 +1,72 @@
+.Downloads {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+  overflow: hidden;
+}
+.Downloads-title{
+  color: #800F2F;
+    font-size: 5vmin;
+    margin-top: 5vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90vw;
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}
+
+.Eliora-download{
+       position: absolute;
+    width: 16vw;
+    height: auto;
+    left: 29vw;
+    margin-top: 17vh;
+}
+
+.buble-text-do{
+    position: absolute;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vmin;
+    line-height: 47px;
+    text-align: center;
+    color: #000000;
+    z-index: 100000;
+    right: 26vw;
+    width: 18vw;
+    margin-top: 21vh;
+}
+.link-buble-do{
+    color: #800F2F;
+
+}
+.speach-bubleimg-do{
+position: absolute;
+    right: 19vw;
+    margin-top: 10vh;
+    width: 29vw;
+    height: auto;
+}
+
+.speach-buble-do{
+    position: absolute;
+    right:10vw;
+    width: 40vw;
+    height: 20vh;
+}
+.next-button-download{
+  position: absolute;
+  top:80vh;
+  left:10vw;
+  border: none;
+  background-color: transparent;
+cursor: pointer;
+}
+.next-button-download:hover{
+ transform: scale(1.1);
+}

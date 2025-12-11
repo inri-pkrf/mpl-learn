@@ -1,9 +1,37 @@
 .flip-page {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 0;
-  flex-wrap: wrap;
-  background: #fafafa;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 133px 0;
+    flex-wrap: wrap;
+    background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
+    height: 100vh;
+    gap: 10vw;
+    overflow: hidden;
+}
+.FlipPage-title{
+  color: #800F2F;
+    font-size: 5vmin;
+    margin-top: -8vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90vw;
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}
+.link-flip{
+  color: #800F2F;
+}
+
+.next-button-fil{
+  position: absolute;
+  top:80vh;
+  left:10vw;
+  border: none;
+  background-color: transparent;
+cursor: pointer;
+}
+.next-button-fil:hover{
+ transform: scale(1.1);
 }

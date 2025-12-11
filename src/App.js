@@ -15,6 +15,7 @@ import Map from './ComponentsJsx/Map.jsx';
 import CollageLang from './PartTwo/CollageLang.jsx';
 import LearnReact from './PartThree/LearnReact.jsx';
 import FlipPage from './PartFour/FlipPage.jsx';
+import Downloads from './PartFive/Downloads.jsx';
 function AppContent() {
   const location = useLocation();
   const [user, setUser] = useState(null);
@@ -49,6 +50,7 @@ function AppContent() {
         <Route path="/collageLanguge" element={<CollageLang user={user} />} />
         <Route path="/LearnReact" element={<LearnReact user={user} />} />
         <Route path="/FlipPage" element={<FlipPage user={user} />} />
+        <Route path="/Downloads" element={<Downloads user={user} />} />
       </Routes>
     </div>
   );

@@ -1,8 +1,8 @@
 .flip-card {
-  width: 320px;
-  height: 260px;
-  perspective: 1000px;
-  cursor: pointer;
+    width: 20vw;
+    height: 62vh;
+    perspective: 1000px;
+    cursor: pointer;
 }
 
 .flip-inner {
@@ -29,31 +29,32 @@
 }
 
 .flip-front {
-  background: #ffffff;
+  background: #ffb4fb;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-family: "Karantina", cursive;
-  font-size: 1.7rem;
+    font-family: 'Rubik';
+  font-size: 3vmin;
 }
 
 .flip-front p {
-  font-family: "Assistant", sans-serif;
-  font-size: 0.9rem;
+  font-family:'Rubik';
+  font-size:2vmin;
   margin-top: 10px;
   color: #555;
 }
 
 .flip-back {
-  background: #f4f4f4;
+  background: #f7b8ff;
   transform: rotateY(180deg);
   overflow-y: auto;
 }
 
 .flip-content {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #333;
-  font-family: "Assistant", sans-serif;
+ font-size: 2.5vmin;
+    line-height: 1.4;
+    color: #333;
+    text-align: right;
+    font-family: "Rubik";
 }

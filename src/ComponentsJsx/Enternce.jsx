@@ -18,7 +18,7 @@ const Enternce = () => {
       <h1 className="Enternce-title">איזה כיף שאת איתנו !!!</h1>
       <img
         src={`${process.env.PUBLIC_URL}/Assets/People/Avital.png`}
-        className="Avital"
+        className="Avital-Entrence"
       />
       <p className="greetings">פעם ראשונה שלך איתנו ?</p>
       <div className="buttons-answer">

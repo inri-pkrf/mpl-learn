@@ -8,6 +8,8 @@ export default function Map({ user: propUser }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [user, setUser] = useState(propUser); 
+  const [loadingDelay, setLoadingDelay] = useState(true);
+
   const [currentStep, setCurrentStep] = useState(null);
 
   const steps = [
@@ -16,35 +18,51 @@ export default function Map({ user: propUser }) {
     { id: 2, label: "השפה של המכללה", right: 600, top: 500, path: "/collageLanguge" },
     { id: 3, label: "ללמוד REACT", right: 800, top: 400, path: "/LearnReact" },
     { id: 4, label: "עיצובים וכלי עבודה", right: 1000, top: 300, path: "/FlipPage" },
-    { id: 5, label: "התקנות", right: 1200, top: 200, path: "/cloudsPage5" },
+    { id: 5, label: "התקנות", right: 1200, top: 200, path: "/Downloads" },
     { id: 6, label: "פרויקט חפיפה", right: 1400, top: 20, path: "/cloudsPage6" },
   ];
 
+useEffect(() => {
+  const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+    if (currentUser) {
+      const docRef = doc(db, "users", currentUser.uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setUser({ uid: currentUser.uid, ...docSnap.data() });
+      } else {
+        setUser({ uid: currentUser.uid }); // fallback
+      }
+    } else {
+      setUser(null);
+    }
+  });
+
+  return () => unsubscribe();
+}, []);
+
+useEffect(() => {
+  if (!user) return;
+
+  const fetchProgress = async () => {
+    const ref = doc(db, "users", user.uid, "progress", "map");
+    const snap = await getDoc(ref);
+    if (snap.exists()) setCurrentStep(snap.data().currentStep);
+    else {
+      await setDoc(ref, { currentStep: 0 });
+      setCurrentStep(0);
+    }
+  };
+  fetchProgress();
+}, [user]);
+
   useEffect(() => {
-    const fetchUser = async () => {
-      if (!user && auth.currentUser) {
-        const docRef = doc(db, "users", auth.currentUser.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) setUser({ uid: auth.currentUser.uid, ...docSnap.data() });
-      }
-    };
-    fetchUser();
-  }, [user]);
+  const timer = setTimeout(() => {
+    setLoadingDelay(false);
+  },800); // זמן השהייה במילישניות
 
- useEffect(() => {
-    if (!user) return;
+  return () => clearTimeout(timer); // מנקה את הטיימר אם הקומפוננטה מתפרקת
+}, []);
 
-    const fetchProgress = async () => {
-      const ref = doc(db, "users", user.uid, "progress", "map");
-      const snap = await getDoc(ref);
-      if (snap.exists()) setCurrentStep(snap.data().currentStep);
-      else {
-        await setDoc(ref, { currentStep: 0 });
-        setCurrentStep(0);
-      }
-    };
-    fetchProgress();
-  }, [user]);
 
   const updateProgress = async (newStep) => {
     const ref = doc(db, "users", user.uid, "progress", "map");
@@ -52,7 +70,14 @@ export default function Map({ user: propUser }) {
     setCurrentStep(newStep);
   };
 
-  if (!user || currentStep === null) return <div>טוען...</div>;
+if (loadingDelay || !user || currentStep === null) 
+  return (
+    <div className="Loading">
+      <img className="Cat" src={`${process.env.PUBLIC_URL}/Assets/download.gif`} />
+      <p>טוען...</p>
+    </div>
+  );
+
 
 
   return (

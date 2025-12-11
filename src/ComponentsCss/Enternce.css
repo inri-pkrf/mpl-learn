@@ -8,20 +8,20 @@
 }
 
 .Enternce-title {
-color: #800F2F;
-    font-size: 5vmin;
-    margin-top: -16vh;
+    color: #800F2F;
+    font-size: 6vmin;
+    margin-top: 3vh;
     position: absolute;
     right: 50%;
     transform: translateX(50%);
     font-family: 'Rubik Spray Paint';
     font-weight: 500;
 }
-.Avital{
+.Avital-Entrence{
 position: absolute;
-    width: 42vw;
+    width: 36vw;
     height: auto;
-    left: -6vw;
+    left: 2vw;
     top: 23vh;
 
 }
@@ -49,15 +49,15 @@ position: absolute;
 } 
 
 .btn-answer p{
-font-family: "Rubik";
-position: relative;
-margin-top:5vh;
-font-weight: 900;
-font-size: 6vmin;
-line-height: 59px;
-text-align: center;
-color: #FFFFFF;
-z-index: 1000;
+    font-family: "Rubik";
+    position: relative;
+    margin-top: 6vh;
+    font-weight: 900;
+    font-size: 6vmin;
+    line-height: 59px;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 1000;
 }
 .btn-answer img{
 font-family: "Rubik";
@@ -72,7 +72,7 @@ color: #FFFFFF;
 .greetings{
 font-family: "Rubik";
     position: absolute;
-    margin-top: -2vh;
+    margin-top: 12vh;
     font-weight: 1000;
     font-size: 4vmin;
     right: 50%;
