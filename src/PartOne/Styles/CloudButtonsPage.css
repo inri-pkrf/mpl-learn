@@ -12,8 +12,8 @@
  display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 20px;
     margin-top: 20vh;
+    margin-left: 2%;
 }
 
 .cloud-button {
@@ -40,7 +40,7 @@
 
 /* התמונה */
 .CloudButtonsPage .cloud-image {
-  width: 100%;
+  width: 120%;
   height: auto;
   display: block;
 }
@@ -48,8 +48,8 @@
 /* הטקסט במרכז התמונה */
 .CloudButtonsPage .cloud-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 40%;
   transform: translate(-50%, -50%);
   font-family: "Rubik";
   color: #333;
@@ -65,9 +65,11 @@
 
 .CloudButtonsPage .checkmark {
   color: pink;
-  position: relative;
+  position: absolute;
   margin-top: 5vh;
-  font-size: 3vmin;
+  font-size: 4vmin;
+  top: -450%;
+  left: -0%;
 }
 .next-button-cloudPage{
   border: none;

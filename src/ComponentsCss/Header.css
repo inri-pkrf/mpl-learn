@@ -15,6 +15,7 @@
     position: fixed;
     top: 2vh;
     left: 5vw;
+    cursor: pointer;
   }
 
   .menu-logo {
@@ -23,6 +24,7 @@
     position: fixed;
     top: 1vh;
     right: 5vw;
+    cursor: pointer;
   }
 
 

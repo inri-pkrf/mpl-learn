@@ -30,14 +30,14 @@ position: absolute;
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 47px;
+    font-size: 3.5vmin;
+    line-height: 3vw;
     text-align: center;
     color: #000000;
     z-index: 100000;
-    right: 13vw;
+    right: 14vw;
     width: 27vw;
-    margin-top: 21vh;
+    margin-top: 25vh;
 }
 .link-buble{
     color: #800F2F;
@@ -45,9 +45,9 @@ position: absolute;
 }
 .speach-bubleimg{
      position: absolute;
-    right: 5vw;
-    margin-top: 10vh;
-    width: 43vw;
+    right: 3vw;
+    margin-top: 12vh;
+    width: 45vw;
     height: auto;
 }
 
@@ -93,4 +93,26 @@ display: flex;
 width: 40vw;
         font-size: 2.5vmin;   
 
+}
+
+.FirstPage .next-button {
+  background: none;
+  border: none;
+  position: absolute;
+  margin-top: 80vh;
+  right: 22vw;
+  transition: opacity 0.3s ease;
+}
+
+/* מצב לא פעיל */
+.FirstPage .next-button.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* מצב פעיל */
+.FirstPage .next-button.active {
+  opacity: 1;
+  cursor: pointer;
 }

@@ -6,37 +6,50 @@ import { db } from '../FireBase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const CloudButtonsPage = () => {
-  const navigate = useNavigate();
   const location = useLocation();
-  const user = location.state?.user; // נשלח דרך ניווט
+  const navigate = useNavigate();
+  const user = location.state?.user;
 
   const [completed, setCompleted] = useState({});
 
+  // טען את ההתקדמות מה-Firestore
   useEffect(() => {
-    if (!user) return;
+    const fetchProgress = async () => {
+      if (!user) return;
 
-    // טוען את ההתקדמות הקודמת מה-Firebase
-    async function fetchCompleted() {
-      const ref = doc(db, 'users', user.uid, 'progress', 'completedClouds');
-      const snap = await getDoc(ref);
-      if (snap.exists()) setCompleted(snap.data());
-    }
-    fetchCompleted();
+      const ref = doc(db, 'users', user.uid, 'progress', 'learnReact');
+      const docSnap = await getDoc(ref);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        setCompleted(data.completed || {}); // data.completed זה אובייקט {id: true}
+      } else {
+        setCompleted({});
+      }
+    };
+    fetchProgress();
   }, [user]);
 
   if (!user) return <div>אנא התחבר/י כדי לראות את העמוד</div>;
 
-  const handleCloudClick = (id) => {
-    navigate(`/page/${id}`, { state: { user } });
+  // לחיצה על ענן
+  const handleCloudClick = async (id) => {
+    const newCompleted = { ...completed, [id]: true };
+    setCompleted(newCompleted);
+
+    // שמור ב-Firestore
+    const ref = doc(db, 'users', user.uid, 'progress', 'learnReact');
+    await setDoc(ref, { completed: newCompleted }, { merge: true });
+
+    navigate(`/page/${id}`, { state: { user, startStep: id } });
   };
 
-  const handleNavigate = async () => {
-    // מעבר חזרה למפה
+  // בדיקה אם כל העננים סומנו
+  const allCompleted = buttonsData.every(btn => completed[btn.id]);
+
+  const handleNavigate = () => {
     navigate("/map", { state: { user } });
   };
-
-  // בודק אם כל העננים סומנו כהושלמו
-  const allCompleted = buttonsData.every(btn => completed[btn.id]);
 
   return (
     <div className="CloudButtonsPage">
@@ -63,7 +76,6 @@ const CloudButtonsPage = () => {
         ))}
       </div>
 
-      {/* כפתור מעבר למפה יוצג רק אם כל העננים סומנו */}
       {allCompleted && (
         <button
           className="next-button-cloudPage"

@@ -24,6 +24,7 @@ function FirstPage() {
   };
 
   const numericScore = Number(score);
+  const canContinue = numericScore >= 70;
   const showWarning = numericScore > 0 && numericScore < 70;
 
   return (
@@ -71,9 +72,9 @@ function FirstPage() {
 
         {/* כפתור תמיד פעיל */}
         <button
-          className="next-button"
-          onClick={handleNavigate}
-          style={{ cursor: "pointer" }}
+          className={`next-button ${canContinue ? "active" : "disabled"}`}
+          onClick={canContinue ? handleNavigate : undefined}
+          disabled={!canContinue}
         >
           <img
             src={`${process.env.PUBLIC_URL}/Assets/Arrow.png`}

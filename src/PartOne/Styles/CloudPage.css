@@ -1,10 +1,4 @@
 /* Reset בסיסי */
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 html, body {
   width: 100%;
   height: 100%;
@@ -12,9 +6,9 @@ html, body {
 
 /* הרקע */
 .cloud-page {
- position: absolute;
-  top:0vh;
-  right:0vh;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   direction: rtl;
@@ -22,17 +16,13 @@ html, body {
   overflow: hidden;
 }
 
-
-
 .cloud-page-item {
   position: relative;
   text-align: center;
-    direction: rtl;
-
+  direction: rtl;
   min-height: 100vh; /* פריט לפחות גובה מסך */
-  margin-bottom: 0;  /* או מרווח קטן יותר אם רוצים */
+  margin-bottom: 0;
 }
-
 
 /* קונטיינר שמחזיק את התמונה + טקסט */
 .cloud-img-wrapper {
@@ -47,18 +37,15 @@ html, body {
 }
 
 .cloud-page-img-info {
-width: 10vw;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    position: relative;
-    left: 67vw;
-    top: 5vh;
+  width: 10vw;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  position: relative;
+  left: 67vw;
+  top: 5vh;
 }
-
-
-
 
 /* קונטיינר לטקסט שיושב על התמונה */
 .cloud-page .cloud-text {
@@ -66,28 +53,36 @@ width: 10vw;
   top: 50%;               
   left: 50%;
   transform: translate(-50%, -50%);  
-  width: 60%;
+  width: 62%;
   z-index: 10;
-  text-align: center;
   direction: rtl;
+  font-family: 'Rubik', sans-serif;
+  text-align: right;
 }
 
 /* Subtitle */
 .cloud-page h3 {
   font-size: 5vmin;
-  color: #555;
-  margin-bottom: 2vh;
   color: #55C6FF;
-    direction: rtl;
-
+  margin-bottom: 2vh;
+  direction: rtl;
+  text-align: center;
 }
 
-/* Text */
-.cloud-page p {
+/* Text ו־content דינמי */
+.cloud-page p,
+.cloud-page .cloud-text span,
+.cloud-page .cloud-text a {
   font-size: 2.5vmin;
-    direction: rtl;
-
   line-height: 1.5;
+  direction: rtl;
+}
+
+/* קישורים בתוך content */
+.cloud-text a.link-buble {
+  color: #800F2F;
+  text-decoration: underline;
+  margin: 0 0.2em;
 }
 
 /* הכותרת הראשית מעל התמונה */
@@ -100,18 +95,35 @@ width: 10vw;
   font-family: 'Rubik Spray Paint';
   font-weight: 500;
 }
-.next-button-cloud{
+
+/* כפתור המשך */
+.next-button-cloud {
   position: absolute;
-  top:80vh;
-  left:10vw;
+  top: 80vh;
+  left: 10vw;
   border: none;
   background-color: transparent;
-cursor: pointer;
+  cursor: pointer;
 }
-.next-button-cloud:hover{
- transform: scale(1.1);
-}
-.cloud-page-img{
-  width: 100%; display: block;
 
+.next-button-cloud:hover {
+  transform: scale(1.1);
+}
+
+/* תמונה ראשית */
+.cloud-page-img {
+  width: 100%;
+  display: block;
+}
+
+.book-img {
+  position: relative;
+  left: -35%;
+  top: 0%;
+}
+
+.AvitalThink-img {
+  position: relative;
+  left: -35%;
+  top: 5%;
 }

@@ -8,11 +8,12 @@ const LearnReact = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const user = location.state?.user;
+  const startStep = location.state?.startStep ?? 0; // אם לא נשלח, 0
 
-  const [currentStep, setCurrentStep] = useState(0); // השלב הנוכחי
-  const [maxStep, setMaxStep] = useState(0); // ההתקדמות המקסימלית מה-Firestore
-  const [answerSelected, setAnswerSelected] = useState(false); // האם המשתמש בחר תשובה
-  const [isCorrect, setIsCorrect] = useState(false); // האם התשובה נכונה
+  const [currentStep, setCurrentStep] = useState(startStep);
+  const [maxStep, setMaxStep] = useState(startStep);
+  const [answerSelected, setAnswerSelected] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   // טען את ההתקדמות של המשתמש מ-Firestore
   useEffect(() => {
@@ -21,12 +22,17 @@ const LearnReact = () => {
       const ref = doc(db, 'users', user.uid, 'progress', 'learnReact');
       const docSnap = await getDoc(ref);
       if (docSnap.exists()) {
-        setMaxStep(docSnap.data().maxStep || 0);
-        setCurrentStep(docSnap.data().maxStep || 0);
+        const firestoreMaxStep = docSnap.data().maxStep || 0;
+
+        // אם startStep הגיע מהניווט והוא יותר גדול מה־Firestore, נשאר בו
+        const initialStep = startStep >= 0 ? startStep : firestoreMaxStep;
+
+        setCurrentStep(initialStep);
+        setMaxStep(Math.max(firestoreMaxStep, initialStep));
       }
     };
     fetchProgress();
-  }, [user]);
+  }, [user, startStep]);
 
   // שמירה ב-Firestore
   const saveProgress = async (step) => {
@@ -35,22 +41,20 @@ const LearnReact = () => {
     await setDoc(ref, { maxStep: step }, { merge: true });
   };
 
-const handleNext = () => {
-  if (currentStep < 2) {
-    const nextStep = currentStep + 1;
-    setCurrentStep(nextStep);
-    setAnswerSelected(false);
-    setIsCorrect(false);
-    if (nextStep > maxStep) {
-      setMaxStep(nextStep);
-      saveProgress(nextStep);
+  const handleNext = () => {
+    if (currentStep < 2) {
+      const nextStep = currentStep + 1;
+      setCurrentStep(nextStep);
+      setAnswerSelected(false);
+      setIsCorrect(false);
+      if (nextStep > maxStep) {
+        setMaxStep(nextStep);
+        saveProgress(nextStep);
+      }
+    } else if (currentStep === 2) {
+      navigate("/map", { state: { user } });
     }
-  } else if (currentStep === 2) {
-    // כאן ננווט ל /map
-    navigate("/map");
-  }
-};
-
+  };
 
   const handlePrev = () => {
     if (currentStep > 0) {
@@ -60,9 +64,8 @@ const handleNext = () => {
     }
   };
 
-  // בוחן
   const handleAnswer = (choice) => {
-    const correctChoice = "ג"; // התשובה הנכונה
+    const correctChoice = "ג";
     setAnswerSelected(true);
     setIsCorrect(choice === correctChoice);
   };
@@ -123,7 +126,6 @@ const handleNext = () => {
             </button>
           </div>
 
-          {/* הצגת נכון או לא נכון */}
           {answerSelected && (
             <div className={`answer-feedback ${isCorrect ? "correct" : "wrong"}`}>
               {isCorrect ? "נכון!" : "לא נכון"}
@@ -132,11 +134,11 @@ const handleNext = () => {
             הכפתור מפעיל את props.change(), שמעדכן את ה‑state של Parent.
             React מרנדרת מחדש את Parent עם הערך החדש, וה‑Child מקבל את ה‑prop המעודכן (number).
             לכן, כל לחיצה על הכפתור מעלה את count ב‑1 ומעדכנת את המסך.</p>
-          
             </div>
           )}
         </div>
       )}
+
       {currentStep === 2 && (
         <div className='third'>
           <h1 className="react-title">איך אנחנו עובדות בריאקט</h1>
@@ -146,11 +148,9 @@ const handleNext = () => {
           של הכל ותביני בגדול איך אנחנו עובדות .
 בהמשך תתחברי לגיטהאב שלנו ותוכלי לראות קודים שלנו ולהשתמש בהם בתור התחלה            
           </p> 
-        
         </div>
       )}
 
-      {/* ניווט בין השלבים */}
       <div className='navigation-btn'>
         {currentStep > 0 && (
           <div onClick={handlePrev} className='prev'>
@@ -158,11 +158,10 @@ const handleNext = () => {
           </div>
         )}
        {(currentStep < 3 || (currentStep === 1 && answerSelected)) && (
-  <div onClick={handleNext} className='next'>
-    <img className="arrow left" src={`${process.env.PUBLIC_URL}/assets/Arrow.png`} />
-  </div>
-)}
-
+          <div onClick={handleNext} className='next'>
+            <img className="arrow left" src={`${process.env.PUBLIC_URL}/assets/Arrow.png`} />
+          </div>
+       )}
       </div>
 
     </div>
