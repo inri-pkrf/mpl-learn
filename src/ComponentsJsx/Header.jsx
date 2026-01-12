@@ -8,11 +8,13 @@ function Header({ user }) {
 
   return (
     <div className="header">
-      <img
-        src={`${process.env.PUBLIC_URL}/Assets/i-icon.png`}
-        className="i-logo"
-        alt="logo"
-      />
+      <div onClick={() => navigate('/DevInfo')} className='infoBtn'>
+          <img
+            src={`${process.env.PUBLIC_URL}/Assets/i-icon.png`}
+            className="i-logo"
+            alt="logo"
+          />
+      </div>
 
       <div
         className="back-homeNav"

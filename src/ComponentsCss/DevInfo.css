@@ -1,0 +1,91 @@
+.DevInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FFB3C1; 
+  overflow: hidden;
+}
+
+.Ellipse {
+    margin-top: 12%;
+}
+
+.Together {
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 26%;
+}
+
+#NameCloud-1 {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 15%;
+}
+
+#NameCloud-2 {
+    position: absolute;
+    top: 18%;
+    left: 49%;
+    width: 15%;
+}
+
+#NameCloud-3 {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    width: 15%;
+}
+
+.mirror-img {
+  transform: scaleX(-1);
+}
+
+.image-container {
+  position: absolute;
+  width: 15%;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+.text {
+  position: absolute;
+  inset: 0;                 /* תופס את כל שטח התמונה */
+  display: flex;
+  align-items: center;      /* מרכז אנכית */
+  justify-content: center;  /* מרכז אופקית */
+  color: #FF97AA;
+  font-size: 2vw;
+  font-family: 'Rubik Spray Paint';
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+  margin-bottom: 5vh;
+}
+
+.Dev-Title {
+    color: #ffffff;
+    font-size: 6vmin;
+    margin-top: 5vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90vw;
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}
+
+.Dev-Title2 {
+    color: #ffffff;
+    position: absolute;
+    margin-top: 12vh;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 2.5vmin;
+}

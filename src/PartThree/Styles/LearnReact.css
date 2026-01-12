@@ -89,7 +89,7 @@ direction: rtl;
 .navigation-btn {
     position: fixed; /* במקום relative */
     bottom: 20px; /* תמיד 20px מהתחתית */
-    left: 50%;
+    left: -30%;
     transform: translateX(-50%);
     width: 90%;
     display: flex;
@@ -99,7 +99,6 @@ direction: rtl;
     gap: 0;
 }
 
-.navigation-btn .prev,
 .navigation-btn .next {
     display: flex;
     flex-direction: column;
@@ -123,20 +122,20 @@ direction: rtl;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 32vh;
-  right: 15vw;
+  margin-top: 33vh;
+  right: 19vw;
   cursor: pointer;
 }
 
 .quiz-btn {
 box-sizing: border-box;
 width: 418px;
-height: 122px;
+height: 100px;
 background: #FFFFFF;
 border: 4px dashed #800F2F;
 border-radius: 22px;
 font-size: 2vmin;
-
+cursor: pointer;
 }
 
 .quiz-btn:hover {
@@ -152,6 +151,14 @@ font-size: 2vmin;
   width: 40vw;
   font-weight: bold;
   text-align: center;
+  background-color: #fac5d4;
+  border-radius: 2vw;
+  box-shadow: 0.5vw 0.5vh 2vw #a09f9f;
+  display: flex;
+  justify-content: center; /* מרכז אופקית */
+  align-items: center; 
+  flex-direction: column;
+  padding: 0.5vh;
 }
 
 .answer-feedback.correct {
@@ -164,4 +171,12 @@ font-size: 2vmin;
 .exp{
   color: rgb(0, 0, 0);
   font-weight: lighter;
+  width: 90%;
+}
+
+.react3-img {
+  width: 70vh;
+  position: absolute;
+  top: 28%;
+
 }

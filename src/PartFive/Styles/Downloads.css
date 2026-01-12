@@ -7,7 +7,7 @@
   background: linear-gradient(108.99deg, #FFFFFF 2.2%, #FFCCD5 94.02%);
   overflow: hidden;
 }
-.Downloads-title{
+.Downloads-title, .Downloads-title2{
   color: #800F2F;
     font-size: 5vmin;
     margin-top: 5vh;
@@ -19,12 +19,16 @@
     font-weight: 500;
 }
 
+.Downloads-title2 {
+  margin-top: 12vh;
+}
+
 .Eliora-download{
        position: absolute;
     width: 16vw;
     height: auto;
     left: 29vw;
-    margin-top: 17vh;
+    margin-top: 20vh;
 }
 
 .buble-text-do{
@@ -39,7 +43,7 @@
     z-index: 100000;
     right: 26vw;
     width: 18vw;
-    margin-top: 21vh;
+    margin-top: 26vh;
 }
 .link-buble-do{
     color: #800F2F;
@@ -48,7 +52,7 @@
 .speach-bubleimg-do{
 position: absolute;
     right: 19vw;
-    margin-top: 10vh;
+    margin-top: 20vh;
     width: 29vw;
     height: auto;
 }
@@ -69,4 +73,10 @@ cursor: pointer;
 }
 .next-button-download:hover{
  transform: scale(1.1);
+}
+
+.link-buble-do {
+  position: absolute;
+  top: 84%;
+  left: 28%;
 }

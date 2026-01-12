@@ -144,19 +144,19 @@ const LearnReact = () => {
           <h1 className="react-title">איך אנחנו עובדות בריאקט</h1>
           <p className='react-txt'>
            טוב אחרי שלמדת והבנת מה עשית בקוד הגיע הזמן שתעברי על 
-            <a href="https://docs.google.com/document/d/1g6IxFzz1aj-rvDfyRQXNzfvUI7jnAJvzf9cGgA6jS1c/edit?tab=t.0" target="_blank" rel="noopener noreferrer">סיכום</a> לאתר שילמד אותך React רק שניישר קו.
+            <a href="https://docs.google.com/document/d/1g6IxFzz1aj-rvDfyRQXNzfvUI7jnAJvzf9cGgA6jS1c/edit?tab=t.0" target="_blank" rel="noopener noreferrer"> סיכום </a> לאתר שילמד אותך React רק שניישר קו.
           של הכל ותביני בגדול איך אנחנו עובדות .
 בהמשך תתחברי לגיטהאב שלנו ותוכלי לראות קודים שלנו ולהשתמש בהם בתור התחלה            
-          </p> 
+          </p>
+          <img             
+          className='react3-img'
+          src={`${process.env.PUBLIC_URL}/Assets/People/Avital.png`}
+          alt="React Step 3"
+          />
         </div>
       )}
 
       <div className='navigation-btn'>
-        {currentStep > 0 && (
-          <div onClick={handlePrev} className='prev'>
-            <img className="arrow right" src={`${process.env.PUBLIC_URL}/assets/Arrow.png`} />
-          </div>
-        )}
        {(currentStep < 3 || (currentStep === 1 && answerSelected)) && (
           <div onClick={handleNext} className='next'>
             <img className="arrow left" src={`${process.env.PUBLIC_URL}/assets/Arrow.png`} />

@@ -18,7 +18,7 @@ export default function Map({ user: propUser }) {
     { id: 3, label: "ללמוד REACT", right: 800, top: 400, path: "/LearnReact",   state: {user,startStep: 0} },
     { id: 4, label: "עיצובים וכלי עבודה", right: 1000, top: 300, path: "/FlipPage" },
     { id: 5, label: "התקנות", right: 1200, top: 200, path: "/Downloads" },
-    { id: 6, label: "פרויקט חפיפה", right: 1400, top: 20, path: "/cloudsPage6" },
+    { id: 6, label: "פרויקט חפיפה", right: 1400, top: 20, path: "/Project" },
   ];
 
   useEffect(() => {

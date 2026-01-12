@@ -1,0 +1,30 @@
+.Project {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #d8b9c7; 
+  overflow: hidden;
+}
+
+.Dev-Title {
+    color: #ffffff;
+    font-size: 6vmin;
+    margin-top: 5vh;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90vw;
+    font-family: 'Rubik Spray Paint';
+    font-weight: 500;
+}
+
+.Dev-Title2 {
+    color: #ffffff;
+    position: absolute;
+    margin-top: 12vh;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 2.5vmin;
+}

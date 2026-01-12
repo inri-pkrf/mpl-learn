@@ -14,9 +14,11 @@ function Downloads() {
   return (
     <div className="Downloads">
     <h1 className="Downloads-title">
-  הי {user?.full_name}, נו כמעט סיימת חפיפה, מתרגשת?
+  היי {user?.full_name}❤️
 </h1>
-
+    <h1 className="Downloads-title2">
+       נו כמעט סיימת חפיפה, מתרגשת???
+</h1>
 
  <div className="speach-buble">
         <img
@@ -24,15 +26,15 @@ function Downloads() {
           className="speach-bubleimg-do"
         />
         <p className="buble-text-do">
-                 בחלק הזה תקראי למפתחת לומדה ותיקה את לא עושה לבד 
- 
+                 בחלק הזה תקראי למפתחת לומדה ותיקה את לא עושה לבד
+            <p></p>
            <a
             className="link-buble-do"
             href="https://docs.google.com/document/d/1R6mBVnwoowEE16KW9naZEooIAar_fp2A3VsqtUwSmpg/edit?tab=t.0"
             target="_blank"
             rel="noopener noreferrer"
           >
-           כנסי לקישור
+            כנסי לקישור
           </a>
         </p>
         </div>

@@ -43,3 +43,33 @@
 
 
 }
+
+.infoBtn {
+  position: relative;
+}
+
+/* הריבוע שמופיע */
+.infoBtn::after {
+  content: "כדאי להציץ";
+  position: absolute;
+  margin-top: 2%;     /* מעל הכפתור */
+  left: 12%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* במעבר עכבר */
+.infoBtn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
