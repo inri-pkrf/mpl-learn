@@ -4,12 +4,11 @@
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: #d8b9c7; 
   overflow: hidden;
 }
 
 .Dev-Title {
-    color: #ffffff;
+    color: #800F2F;
     font-size: 6vmin;
     margin-top: 5vh;
     position: absolute;
@@ -21,10 +20,56 @@
 }
 
 .Dev-Title2 {
-    color: #ffffff;
+    color: #800F2F;
     position: absolute;
     margin-top: 12vh;
     right: 50%;
     transform: translateX(50%);
     font-size: 2.5vmin;
+}
+
+.Dev-Text {
+  color: #ffffff;
+  position: absolute;
+  margin-top: 28vh;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 2.5vmin;
+  background-color: #ff00484f;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.Dev-Title3 {
+  color: #800F2F;
+  font-size: 6vmin;
+  margin-top: 80vh;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  width: 90vw;
+  font-family: 'Rubik Spray Paint';
+  font-weight: 500;
+}
+
+.projectBtn {
+  color: #ffffff;
+  font-size: 4vmin;
+  margin-top: 60vh;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  width: 25vw;
+  font-family: 'Rubik';
+  background-color: #ff6d96;
+  border: none;
+  border-radius: 3vw;
+  padding: 2vw;
+  font-weight:900;
+  box-shadow: 2vw 2vw 3vw rgba(255, 255, 255, 0.61);
+  cursor: pointer;
+}
+
+.projectBtn:hover {
+  background-color: #ff3b72;
 }
