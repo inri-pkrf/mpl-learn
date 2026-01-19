@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mpl-learn/static/css/main.5c68d1d3.css",
-    "main.js": "/mpl-learn/static/js/main.76b48ba7.js",
+    "main.css": "/mpl-learn/static/css/main.1c77fb66.css",
+    "main.js": "/mpl-learn/static/js/main.4235f098.js",
     "static/js/453.1ec89b1e.chunk.js": "/mpl-learn/static/js/453.1ec89b1e.chunk.js",
     "index.html": "/mpl-learn/index.html",
-    "main.5c68d1d3.css.map": "/mpl-learn/static/css/main.5c68d1d3.css.map",
-    "main.76b48ba7.js.map": "/mpl-learn/static/js/main.76b48ba7.js.map",
+    "main.1c77fb66.css.map": "/mpl-learn/static/css/main.1c77fb66.css.map",
+    "main.4235f098.js.map": "/mpl-learn/static/js/main.4235f098.js.map",
     "453.1ec89b1e.chunk.js.map": "/mpl-learn/static/js/453.1ec89b1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c68d1d3.css",
-    "static/js/main.76b48ba7.js"
+    "static/css/main.1c77fb66.css",
+    "static/js/main.4235f098.js"
   ]
 }
