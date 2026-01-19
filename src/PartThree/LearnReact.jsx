@@ -159,7 +159,7 @@ const LearnReact = () => {
       <div className='navigation-btn'>
        {(currentStep < 3 || (currentStep === 1 && answerSelected)) && (
           <div onClick={handleNext} className='next'>
-            <img className="arrow left" src={`${process.env.PUBLIC_URL}/assets/Arrow.png`} />
+            <img className="arrow left" src={`${process.env.PUBLIC_URL}/Assets/Arrow.png`} />
           </div>
        )}
       </div>
@@ -169,3 +169,10 @@ const LearnReact = () => {
 };
 
 export default LearnReact;
+
+        // <button
+        //   onClick={handleNext}
+        //   className='next'
+        //   style={{ cursor: "pointer", marginTop: "20px" }} >
+        //   <img className="arrow left" src={`${process.env.PUBLIC_URL}/Assets/Arrow.png`} />
+        // </button>
