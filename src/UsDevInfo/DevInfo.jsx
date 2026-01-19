@@ -1,6 +1,5 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import '../ComponentsCss/DevInfo.css';
+import { useNavigate } from 'react-router-dom';
+import './Styles/DevInfo.css';
 
 function DevInfo({ user }) {
   const navigate = useNavigate();
@@ -14,7 +13,7 @@ function DevInfo({ user }) {
           className="Together"
         />
 
-        <div className="image-container" id="NameCloud-1">
+        <div className="image-container" id="NameCloud-1"   onClick={() => navigate('/Avital')}>
             <img
                 src={`${process.env.PUBLIC_URL}/Assets/NameCloud.png`}
                 alt="NameCloud"
@@ -22,7 +21,7 @@ function DevInfo({ user }) {
             <span className="text">אביטל</span>
         </div>
         
-        <div className="image-container" id="NameCloud-2">
+        <div className="image-container" id="NameCloud-2" onClick={() => navigate('/Eliora')}>
             <img
                 src={`${process.env.PUBLIC_URL}/Assets/NameCloud.png`}
                 alt="NameCloud"
@@ -30,7 +29,7 @@ function DevInfo({ user }) {
             <span className="text">אליאורה</span>
         </div>
 
-        <div className="image-container" id="NameCloud-3">
+        <div className="image-container" id="NameCloud-3" onClick={() => navigate('/Alma')}>
             <img
                 src={`${process.env.PUBLIC_URL}/Assets/NameCloud.png`}
                 alt="NameCloud"

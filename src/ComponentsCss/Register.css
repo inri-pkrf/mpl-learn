@@ -69,4 +69,34 @@ position: absolute;
    color: #800F2F;
 }
 
+.register-text {
+    position: absolute;
+  top: 20vh;
+  left: 30vw;
+  width: 40vw;
+  font-size: 2.5vmin;
+  color: #590D22;
+}
 
+.register-button2 {
+  color: #ffffff;
+  font-size: 2.5vmin;
+  margin-top: 50vh;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  width: 15vw;
+  font-family: 'Rubik';
+  background-color: #ff6d96;
+  border: none;
+  border-radius: 3vw;
+  padding: 1.5vw;
+  font-weight:900;
+  box-shadow: 2vw 2vw 3vw rgba(218, 147, 147, 0.61);
+  cursor: pointer;
+}
+
+.register-button2:hover {
+  background-color: #ff3b72;
+  box-shadow: 2vw 2vw 3vw rgba(161, 53, 53, 0.61);
+}

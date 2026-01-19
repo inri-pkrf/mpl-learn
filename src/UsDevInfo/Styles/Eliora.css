@@ -1,0 +1,60 @@
+.Eliora {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FFB3C1; 
+  overflow: hidden;
+}
+
+.ElioraPic {
+  position: absolute;
+  width: 15vw;
+  top: 32vh;
+  left: 28vw;
+}
+
+.speachBuble {
+  position: absolute;
+  top: 25vh;
+  left: 40vw;
+}
+
+.Nametext {
+  position: absolute;
+  inset: 0;                 /* תופס את כל שטח התמונה */
+  display: flex;
+  align-items: center;      /* מרכז אנכית */
+  justify-content: center;  /* מרכז אופקית */
+  color: #da6679;
+  font-size: 2.5vw;
+  font-family: 'Rubik Spray Paint';
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+  margin-bottom: 70vh;
+}
+
+.DevInfoBtn {
+  color: #ffffff;
+  font-size: 2.5vmin;
+  margin-top: 80vh;
+  position: absolute;
+  right: 40%;
+  transform: translateX(50%);
+  width: 15vw;
+  font-family: 'Rubik';
+  background-color: #ff6d96;
+  border: none;
+  border-radius: 3vw;
+  padding: 1.5vw;
+  font-weight:900;
+  box-shadow: 2vw 2vw 3vw rgba(218, 147, 147, 0.61);
+  cursor: pointer;
+}
+
+.DevInfoBtn:hover {
+  background-color: #ff3b72;
+  box-shadow: 2vw 2vw 3vw rgba(161, 53, 53, 0.61);
+}

@@ -1,0 +1,25 @@
+.AvitalPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FFB3C1; 
+  overflow: hidden;
+}
+
+.AvitalPic {
+  position: absolute;
+  width: 35vw;
+  top: 36vh;
+  left: 18vw;
+}
+
+.bubble-text {
+  position: absolute;
+  top: 34vh;
+  left: 44vw;
+  width: 22vw;
+  font-size: 2.5vmin;
+  color: #590D22;
+}

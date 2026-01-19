@@ -16,8 +16,12 @@ import CollageLang from './PartTwo/CollageLang.jsx';
 import LearnReact from './PartThree/LearnReact.jsx';
 import FlipPage from './PartFour/FlipPage.jsx';
 import Downloads from './PartFive/Downloads.jsx';
-import DevInfo from './ComponentsJsx/DevInfo.jsx';
+import DevInfo from './UsDevInfo/DevInfo.jsx';
 import Project from './PartSix/Project.jsx';
+import Avital from './UsDevInfo/Avital.jsx';
+import Eliora from './UsDevInfo/Eliora.jsx';
+import Alma from './UsDevInfo/Alma.jsx';
+
 function AppContent() {
   const location = useLocation();
   const [user, setUser] = useState(null);
@@ -55,6 +59,9 @@ function AppContent() {
         <Route path="/Downloads" element={<Downloads user={user} />} />
         <Route path="/DevInfo" element={<DevInfo user={user} />} />
         <Route path="/Project" element={<Project user={user} />} />
+        <Route path="/Avital" element={<Avital user={user} />} />
+        <Route path="/Eliora" element={<Eliora user={user} />} />
+        <Route path="/Alma" element={<Alma user={user} />} />
 
       </Routes>
     </div>

@@ -1,0 +1,17 @@
+.Alma {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FFB3C1; 
+  overflow: hidden;
+}
+
+.AlmaPic {
+  position: absolute;
+  width: 30vw;
+  top: 38vh;
+  left: 20vw;
+  transform: scaleX(-1);
+}

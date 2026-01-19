@@ -47,6 +47,7 @@
 .image-container {
   position: absolute;
   width: 15%;
+  cursor: pointer;
 }
 
 .image-container img {

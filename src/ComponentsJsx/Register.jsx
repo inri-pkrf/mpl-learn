@@ -53,7 +53,7 @@ export default function Register() {
         <p className="register-text">
           נשלח אליך מייל לאימות. אנא בדוק את תיבת המייל (כולל ספאם) ולחץ על הקישור לאישור החשבון.
         </p>
-        <button className="register-button" onClick={() => navigate("/login")}>
+        <button className="register-button2" onClick={() => navigate("/login")}>
           עבור להתחברות
         </button>
       </div>
