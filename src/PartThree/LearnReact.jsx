@@ -169,10 +169,3 @@ const LearnReact = () => {
 };
 
 export default LearnReact;
-
-        // <button
-        //   onClick={handleNext}
-        //   className='next'
-        //   style={{ cursor: "pointer", marginTop: "20px" }} >
-        //   <img className="arrow left" src={`${process.env.PUBLIC_URL}/Assets/Arrow.png`} />
-        // </button>
