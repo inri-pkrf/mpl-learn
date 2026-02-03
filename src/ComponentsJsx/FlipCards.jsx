@@ -20,4 +20,5 @@ const FlipCard = ({ title, children }) => {
   );
 };
 
+
 export default FlipCard;
